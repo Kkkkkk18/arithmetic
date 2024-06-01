@@ -14,8 +14,7 @@ int main() {
 			ones_compl_int<signed char> second(j);
 			ones_compl_int<signed char> result = first + second;
 			if ((int)(signed char)(first.value() + j) != (int)(signed char)result.value())
-				cout << "ERROR (" << (int)first.value() << ")+(" << (int)j << ") != " << (int)(signed char)(first.value() + j) <<
-				" : " << (int)(signed char)result.value() << " obtained!" << endl;
+				 std::cout << "ERROR (" << (int)first.value() << ")+(" << (int)j << ") != " << (int)(signed char)(first.value() + j) << " : " << (int)(signed char)result.value() << " obtained!" << std::endl;
 		}
 	}
 	for (int i = 0; i < 127; i++) {
@@ -24,8 +23,7 @@ int main() {
 			ones_compl_int<signed char> second(j);
 			ones_compl_int<signed char> result = first - second;
 			if ((int)(signed char)(i - j) != (int)(signed char)result.value())
-				cout << "ERROR (" << (int)i << ")-(" << (int)j << ") != " << (int)(signed char)(i - j) <<
-				" : " << (int)(signed char)result.value() << " obtained!" << endl;
+				std::cout << "ERROR (" << (int)i << ")-(" << (int)j << ") != " << (int)(signed char)(i - j) << " : " << (int)(signed char)result.value() << " obtained!" << std::endl;
 		}
 	}
 	for (int i = -255; i < 255; i++) {
@@ -34,8 +32,7 @@ int main() {
 			ones_compl_int<signed int> second(j);
 			ones_compl_int<signed int> result = first * second;
 			if ((int)(signed int)(i * j) != (int)(signed int)result.value())
-				cout << "ERROR (" << (int)i << ")*(" << (int)j << ") != " << (int)(signed int)(i * j) <<
-				" : " << (int)(signed int)result.value() << " obtained!" << endl;
+				std::cout << "ERROR (" << (int)i << ")*(" << (int)j << ") != " << (int)(signed int)(i * j) << " : " << (int)(signed int)result.value() << " obtained!" << std::endl;
 		}
 	}
 	for (int i = -1000; i < 1000; i++) {
@@ -45,8 +42,7 @@ int main() {
 			ones_compl_int<signed int> result = first / second;
 			if (j == 0) continue;
 			if ((int)(signed int)(i / j) != (int)(signed int)result.value())
-				cout << "ERROR (" << (int)i << ")/(" << (int)j << ") != " << (int)(signed int)(i / j) <<
-				" : " << (int)(signed int)result.value() << " obtained!" << endl;
+				std::cout << "ERROR (" << (int)i << ")/(" << (int)j << ") != " << (int)(signed int)(i / j) << " : " << (int)(signed int)result.value() << " obtained!" << std::endl;
 		}
 	}
 
